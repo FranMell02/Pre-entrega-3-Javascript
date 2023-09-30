@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda pre-entrega JavaScript</title>
+</head>
+<body>
+    <h1>Registro de Personas</h1>
+
+    <form id="formularioPersonas">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required>
+
+        <label for="altura">Altura (metros):</label>
+        <input type="number" step="0.01" id="altura" required>
+
+        <button type="button" onclick="ingresarPersona()">Ingresar Persona</button>
+    </form>
+
+    <h2>Datos de Personas</h2>
+    <pre id="datosPersonas"></pre>
+
+    <h2>Personas Mayores de 18 años</h2>
+    <pre id="mayoresDe18"></pre>
+
+    <h2>Personas Menores o Iguales a 18 años</h2>
+    <pre id="menoresDe18"></pre>
+
+    <script src="main.js"></script>
+</body>
+</html>
