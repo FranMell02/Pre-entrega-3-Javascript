@@ -11,9 +11,9 @@ function ingresarPersona() {
 
     // Objeto
     let persona = {
-        nombre: nombre,
-        edad: edad,
-        altura: altura
+    nombre: nombre,
+    edad: edad,
+    altura: altura
     };
 
     // Agregar el objeto al local storage
@@ -45,4 +45,23 @@ function actualizarDatos() {
     document.getElementById('menoresDe18').innerText = JSON.stringify(personasMenoresDe18, null, 2);
 }
 
-    actualizarDatos();
+actualizarDatos();
+
+//Funcion para mostrar datos en pantalla 
+function mostrarDatosEnPantalla() {
+    let datosHTML = '<h2>Datos de Personas</h2>';
+            datosHTML += '<pre>';
+            personas.forEach(persona => {
+                datosHTML += `Nombre: ${persona.nombre}, Edad: ${persona.edad}, Altura: ${persona.altura}\n`;
+            });
+
+    // Filtrar personas mayores de 18 años
+    let personasMayoresDe18 = personas.filter(persona => persona.edad > 18);
+    document.getElementById('mayoresDe18').innerText = JSON.stringify(personasMayoresDe18, null, 2);
+
+    // Filtrar personas menores de 18
+    let personasMenoresDe18 = personas.filter(persona => persona.edad < 18);
+    document.getElementById('menoresDe18').innerText = JSON.stringify(personasMenoresDe18, null, 2);
+}
+
+
