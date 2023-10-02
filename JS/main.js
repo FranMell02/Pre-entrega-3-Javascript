@@ -47,10 +47,10 @@ function actualizarDatos() {
 
 actualizarDatos();
 
-//Funcion para mostrar datos en pantalla 
+//Funcion para mostrar datos
 function mostrarDatosEnPantalla() {
-    let datosHTML = '<h2>Datos de Personas</h2>';
-            datosHTML += '<pre>';
+    //let datosHTML = '<h2>Datos de Personas</h2>';
+            //datosHTML += '<h3>';
             personas.forEach(persona => {
                 datosHTML += `Nombre: ${persona.nombre}, Edad: ${persona.edad}, Altura: ${persona.altura}\n`;
             });
